@@ -1,0 +1,222 @@
+.about-header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.about-parallax-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#about-section1 {
+  background: url('https://res.cloudinary.com/dvzsvgucq/image/upload/v1680022485/tom-sekula-7i-2GEHAgvs-unsplash_cxgu0s.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+#about-section2 {
+  background: url('https://res.cloudinary.com/dvzsvgucq/image/upload/v1680022991/DSC08600_jfuogk.jpg') no-repeat center 30% fixed;
+  background-size: cover;
+}
+
+#about-section3 {
+  background: url('https://res.cloudinary.com/dvzsvgucq/image/upload/v1680280371/DSC09561_i1degt.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+#about-section4 {
+  background: url('/assets/forbes.png') no-repeat center 25% fixed;
+  background-size: cover;
+}
+
+#about-section5 {
+  background: url('https://res.cloudinary.com/dvzsvgucq/image/upload/v1679050856/DSC02904_arkwah.jpg') no-repeat center 15% fixed;
+  background-size: cover;
+}
+
+#about-section6 {
+  background: url('https://res.cloudinary.com/dvzsvgucq/image/upload/v1680024043/DSC06316_zwekjl.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.about-content .about-parallax-section h2 {
+  font-size: 36px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  position: absolute;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  padding: 0.5rem 1rem;
+}
+
+.about-parallax-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.about-detail-section {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  width: 30%;
+  padding-left: 50px;
+  padding-right: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 2;
+}
+
+.image-container {
+  width: 70%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-betsen {
+  width: 60%;
+  padding-left: 50px;
+  color: white;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 2;
+}
+
+.image-betsen {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.image-betsen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 25%);
+  z-index: 2;
+}
+
+.image-betsen::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 25%);
+  z-index: 2;
+}
+
+#video-about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.about-content .hello-button {
+  cursor: pointer;
+}
+
+/*Logos médias*/
+
+.about-media-logos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.about-media-logos img {
+  width: auto;
+  height: 40px;
+  margin: 5px;
+}
+
+#bbc, #fr2 {
+  background-color: white;
+  padding: 3px;
+}
+
+/* Pour les tablettes */
+@media screen and (max-width: 768px) {
+  .about-detail-section {
+    flex-direction: column;
+  }
+
+  .text-container, .text-betsen {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .image-container, .image-betsen {
+    width: 100%;
+    height: 50vh;
+  }
+}
+
+/* Pour les mobiles */
+@media screen and (max-width: 480px) {
+  .about-content .about-parallax-section h2 {
+    font-size: 24px;
+  }
+
+  .about-detail-section {
+    height: auto;
+  }
+
+  .image-container, .image-betsen {
+    height: 40vh;
+  }
+
+  .about-media-logos img {
+    height: 30px;
+  }
+}

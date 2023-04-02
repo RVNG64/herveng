@@ -1,0 +1,10 @@
+<% unless current_page?(contact_path) %>
+  <div class="scrolling-container">
+    <div class="scrolling-contact">
+      <% 10.times do %>
+        <%= link_to "Contact me", contact_path , class: "scrolling-link" %>
+        <span class="separator">•</span>
+      <% end %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,40 @@
+.media-appearances-section {
+  text-align: center;
+  padding: 50px 0 0px 0;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+}
+
+.media-logos-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.media-appearances-section .section-title {
+  color: black;
+}
+
+.media-logos-slider {
+  display: flex;
+  animation: scrolling-logos 20s linear infinite;
+}
+
+.media-logos-slider img {
+  width: auto;
+  height: 60px;
+  margin: 10px;
+}
+
+@keyframes scrolling-logos {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

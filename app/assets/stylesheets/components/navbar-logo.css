@@ -1,0 +1,57 @@
+.logo-container {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  overflow: hidden;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  width: 15rem;
+}
+
+.copyright-symbol,
+.text-container {
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.logo-text-container {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.logo-text,
+.hidden-text {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.hidden-text {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  white-space: nowrap;
+  max-width: 0;
+  overflow: hidden;
+}
+
+.logo-link:hover .logo-text {
+  transform: translateX(-100%);
+}
+
+.logo-link:hover .hidden-text {
+  transform: translateX(-93%);
+  max-width: 320px;
+}
+
+.logo-link:hover .copyright-symbol {
+  transform: rotate(360deg);
+  transition: transform 0.3s ease;
+}

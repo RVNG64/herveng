@@ -1,0 +1,36 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <div class="logo-container">
+        <%= link_to root_path, class: "logo-link" do %>
+          <span class="copyright-symbol">&copy;</span>
+          <span class="logo-text-container">
+            <span class="logo-text">Codé par H.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="hidden-text">Hervé Nguetsop</span>
+          </span>
+        <% end %>
+      </div>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+    </button>
+    <div class="nav-menu" id="navMenu">
+      <ul>
+        <li>
+          <%= link_to "Accueil", root_path %>
+        </li>
+        <li>
+          <%= link_to "Projets", projects_path %>
+        </li>
+        <li>
+          <%= link_to "À propos", about_path %>
+        </li>
+        <li>
+          <%= link_to "Say Hello 👋🏿", contact_path, class: 'hello-button' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
