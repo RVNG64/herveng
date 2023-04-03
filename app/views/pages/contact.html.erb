@@ -8,27 +8,28 @@
       <% if flash[:alert] %>
         <div class="flash-message error"><%= flash[:alert] %></div>
       <% end %>
-      <form class="contact-form" action="/contact/send_email" method="POST">
-        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-        <div class="form-group">
-          <input type="text" id="name" name="name" required>
-          <label for="name" class="label-form">Quel est votre nom ?</label>
-        </div>
-        <div class="form-group">
-          <input type="email" id="email" name="email" required>
-          <label for="email" class="label-form">Quel est votre email ?</label>
-        </div>
-        <div class="form-group">
-          <input type="text" id="subject" name="subject" required>
-          <label for="subject" class="label-form">Sujet</label>
-        </div>
-        <div class="form-group">
-          <textarea id="message" rows="5" name="message" required></textarea>
-          <label for="message" class="label-form">Votre message</label>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="submit-button">Envoyer</button>
-        </div>
+      <%= form_with model: @message, url: messages_path, method: :post, local: true, class: "contact-form" do |f| %>
+<%= f.hidden_field :authenticity_token, value: form_authenticity_token %>
+<div class="form-group">
+  <%= f.text_field :name, id: "name", required: true %>
+  <label for="name" class="label-form">Quel est votre nom ?</label>
+</div>
+<div class="form-group">
+  <%= f.email_field :email, id: "email", required: true %>
+  <label for="email" class="label-form">Quel est votre email ?</label>
+</div>
+<div class="form-group">
+  <%= f.text_field :subject, id: "subject", required: true %>
+  <label for="subject" class="label-form">Sujet</label>
+</div>
+<div class="form-group">
+  <%= f.text_area :content, id: "message", rows: 5, required: true %>
+  <label for="message" class="label-form">Votre message</label>
+</div>
+<div class="form-group">
+  <%= f.submit "Envoyer", class: "submit-button" %>
+</div>
+<% end %>
       </form>
     </div>
     <div class="contact-details">
