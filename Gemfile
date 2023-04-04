@@ -44,6 +44,8 @@ gem "bootsnap", require: false
 gem 'rails-ujs'
 gem 'mail'
 gem 'sendgrid-ruby'
+gem 'webpacker', '~> 6.0.0.rc.6'
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use Sass to process CSS
 # gem "sassc-rails"

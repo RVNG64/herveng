@@ -96,7 +96,7 @@
 .portrait-container {
   position: absolute;
   bottom: 0;
-  right: -17%;
+  right: 1rem;
   overflow: hidden;
   height: 80%;
 }

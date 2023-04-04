@@ -21,18 +21,18 @@
 
 .media-logos-slider {
   display: flex;
-  animation: scrolling-logos 20s linear infinite;
+  animation: scrolling-logos 100s linear infinite;
 }
 
 .media-logos-slider img {
   width: auto;
   height: 60px;
-  margin: 10px;
+  margin: 10px 50px;
 }
 
 @keyframes scrolling-logos {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-100%);

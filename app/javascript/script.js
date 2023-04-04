@@ -340,25 +340,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(hideOpeningAnimation, 3000);
 });
 
-// Slider médias
-// Ajustez la durée de l'animation en fonction du nombre de logos
-const animationDuration = 300;
-
-document.addEventListener("DOMContentLoaded", () => {
-  const slider = document.querySelector(".media-logos-slider");
-  const logos = slider.querySelectorAll("img");
-
-  // Dupliquez les logos pour éviter les espaces vides lors de l'animation
-  logos.forEach((logo) => {
-    const clonedLogo = logo.cloneNode(true);
-    slider.appendChild(clonedLogo);
-  });
-
-  // Ajustez la durée de l'animation en fonction du nombre total de logos
-  const totalLogos = slider.querySelectorAll("img").length;
-  const animationTime = (animationDuration / totalLogos) * logos.length;
-  slider.style.animationDuration = `${animationTime}s`;
-});
 
 // Burger navbar responsive
 document.addEventListener("DOMContentLoaded", function() {

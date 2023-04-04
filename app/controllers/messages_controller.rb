@@ -1,6 +1,14 @@
 class MessagesController < ApplicationController
   def create
-    @message = Message.new(message_params)
+    @message = Message.new(params.permit(:name, :email, :subject, :content))
+
+    name = params[:name]
+    email = params[:email]
+    subject = params[:subject]
+    message = params[:content]
+
+    ContactMailer.send_contact_email(name, email, subject, message).deliver
+
     if @message.save
       flash[:success] = "Votre message a été envoyé avec succès."
       redirect_to root_path

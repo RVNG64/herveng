@@ -1,19 +1,22 @@
 {
-  "name": "herveng",
-  "version": "1.0.0",
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "name": "app",
+  "private": true,
   "dependencies": {
-    "express": "^4.18.2",
-    "nodemailer": "^6.9.1"
+    "@rails/webpacker": "^6.0.0-rc.6",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
+  },
+  "version": "0.1.0",
+  "babel": {
+    "presets": [
+      "./node_modules/@rails/webpacker/package/babel/preset.js"
+    ]
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@webpack-cli/serve": "^2.0.1",
+    "webpack-dev-server": "^4.13.2"
   }
 }
