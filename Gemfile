@@ -47,6 +47,7 @@ gem 'sendgrid-ruby'
 gem 'webpacker', '~> 6.0.0.rc.6'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'pg'
+gem 'rails_12factor', group: :production
 
 # Use Sass to process CSS
 # gem "sassc-rails"
