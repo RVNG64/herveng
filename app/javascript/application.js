@@ -3,6 +3,9 @@ import "@hotwired/turbo-rails";
 import "./script";
 import "controllers";
 
+import Rails from "@rails/ujs";
+Rails.start();
+
 import { Application } from "@hotwired/stimulus";
 import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers";
 

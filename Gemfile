@@ -41,7 +41,6 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-gem 'rails-ujs'
 gem 'mail'
 gem 'sendgrid-ruby'
 gem 'webpacker', '~> 6.0.0.rc.6'
