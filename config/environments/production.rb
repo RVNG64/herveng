@@ -91,9 +91,7 @@ Rails.application.configure do
     user_name: Rails.application.credentials.dig(:production, :gmail, :email),
     password: Rails.application.credentials.dig(:production, :gmail, :password),
     authentication: "plain",
-    enable_starttls_auto: true,
-    open_timeout:         5,
-    read_timeout:         5
+    enable_starttls_auto: true
   }
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
