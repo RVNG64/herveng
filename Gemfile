@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+gem "sqlite3", "~> 1.4", :group => [:development, :test]
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -45,7 +45,7 @@ gem 'mail'
 gem 'sendgrid-ruby'
 gem 'webpacker', '~> 6.0.0.rc.6'
 gem 'dotenv-rails', groups: [:development, :test]
-gem 'pg'
+gem 'pg', :group => :production
 gem 'rails_12factor', group: :production
 
 # Use Sass to process CSS
