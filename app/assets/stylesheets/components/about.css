@@ -16,7 +16,7 @@
 }
 
 #about-section1 {
-  background: url('https://res.cloudinary.com/dvzsvgucq/image/upload/v1680022485/tom-sekula-7i-2GEHAgvs-unsplash_cxgu0s.jpg') no-repeat center center fixed;
+  background: asset-url('dev.jpeg') no-repeat center 5% fixed;
   background-size: cover;
 }
 
@@ -37,11 +37,6 @@
 
 #about-section5 {
   background: url('https://res.cloudinary.com/dvzsvgucq/image/upload/v1679050856/DSC02904_arkwah.jpg') no-repeat center 15% fixed;
-  background-size: cover;
-}
-
-#about-section6 {
-  background: url('https://res.cloudinary.com/dvzsvgucq/image/upload/v1680024043/DSC06316_zwekjl.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -162,6 +157,10 @@
 
 .about-content .hello-button {
   cursor: pointer;
+}
+
+.hello-button .insta-btn {
+  text-decoration: none;
 }
 
 /*Logos médias*/

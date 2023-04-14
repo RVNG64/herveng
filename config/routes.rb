@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :posts
   get 'pages/home'
   get 'pages/contact'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root 'pages#home'
   get 'contact', to: 'pages#contact'
   post 'contact', to: 'messages#create'

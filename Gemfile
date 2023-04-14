@@ -47,6 +47,7 @@ gem 'webpacker', '~> 6.0.0.rc.6'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'pg', :group => :production
 gem 'rails_12factor', group: :production
+gem 'devise'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

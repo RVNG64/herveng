@@ -28,6 +28,8 @@
 @import url(/assets/components/about.css);
 @import url(/assets/components/projects.css);
 @import url(/assets/components/medias.css);
+@import url(/assets/components/intro-home.css);
+@import url(/assets/components/blog-home.css);
 
 body {
   font-family: 'Poppins', sans-serif;

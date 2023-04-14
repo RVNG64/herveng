@@ -1,18 +1,20 @@
 .media-appearances-section {
   text-align: center;
-  padding: 50px 0 0px 0;
+  padding: 50px 0 50px 0;
   background-color: #f5f5f5;
   overflow: hidden;
   position: relative;
+  margin-bottom: 2.5rem;
 }
 
 .media-logos-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 25px;
   display: flex;
   align-items: center;
   height: 100px;
+  margin-bottom: 2rem;
 }
 
 .media-appearances-section .section-title {
@@ -21,7 +23,7 @@
 
 .media-logos-slider {
   display: flex;
-  animation: scrolling-logos 100s linear infinite;
+  animation: scrolling-logos 95s linear infinite;
 }
 
 .media-logos-slider img {

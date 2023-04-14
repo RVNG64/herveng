@@ -1,0 +1,15 @@
+<h1>Nouvel article</h1>
+
+<%= form_with model: @post, local: true do |form| %>
+  <div>
+    <%= form.label :title, "Titre" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :content, "Contenu" %>
+    <%= form.text_area :content %>
+  </div>
+
+  <%= form.submit "Créer l'article" %>
+<% end %>

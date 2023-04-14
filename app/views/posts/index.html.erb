@@ -1,0 +1,23 @@
+<h1>Blog</h1>
+
+<%= link_to "Créer un nouvel article", new_post_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titre</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= link_to post.title, post_path(post) %></td>
+        <td>
+          <%= link_to "Modifier", edit_post_path(post) %>
+          <%= link_to "Supprimer", post_path(post), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cet article ?" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
