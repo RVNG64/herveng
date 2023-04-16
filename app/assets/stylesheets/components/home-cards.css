@@ -41,7 +41,7 @@
   position: relative;
   transform-style: preserve-3d;
   transition: all 1s ease;
-  background-color: #ffffff;
+  background-color: #111111;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -68,6 +68,7 @@
   transform: rotateY(180deg);
   transition: all 1s ease;
   z-index: 0;
+  background-color: #111111;
 }
 
 .card-front,
@@ -89,7 +90,7 @@
 
 .card-front h3,
 .card-back p {
-  color: #333333;
+  color: #ffffff;
 }
 
 .card-image {

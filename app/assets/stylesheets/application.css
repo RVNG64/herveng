@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-/* import url de navbar.css */
 @import url(/assets/components/navbar.css);
 @import url(/assets/components/cursor.css);
 @import url(/assets/components/navbar-logo.css);
@@ -28,7 +27,6 @@
 @import url(/assets/components/about.css);
 @import url(/assets/components/projects.css);
 @import url(/assets/components/medias.css);
-@import url(/assets/components/intro-home.css);
 @import url(/assets/components/blog-home.css);
 
 body {

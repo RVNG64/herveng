@@ -159,8 +159,9 @@
   cursor: pointer;
 }
 
-.hello-button .insta-btn {
+.intro-button a {
   text-decoration: none;
+  color: black;
 }
 
 /*Logos médias*/

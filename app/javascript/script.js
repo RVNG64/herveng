@@ -89,14 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Serge Betsen',
       role: 'Ancien capitaine du XV de France',
       company: 'Serge Betsen Consulting',
-      text: 'Todo',
+      text: "Durant toute notre période de collaboration, il a fait preuve d’un réel professionnalisme et d’une rigueur à toute épreuve. Sa capacité de travail, sa créativité et son esprit d’écoute/analyse ont été essentiels pour la réussite des nombreux projets que je lui ai confiés, souvent à traiter simultanément et sans lien entre eux.",
       image: 'https://lepetitjournal.com/sites/default/files/styles/main_article/public/2022-05/Serge%20-%20photo%20quiz%281%29.jpeg?itok=aZdPXnsK',
     },
     {
       name: 'François Lempereur',
       role: 'Consultant Média-Affaires Publiques',
       company: 'Ex TF1',
-      text: 'Todo',
+      text: "J'ai eu l 'occasion de collaborer avec Hervé lors d'un forum des Sports de l'AS SPORTIVE de TF1. Le 1er contact a été tout de suite convivial et pro. J'ai apprécie la ponctualité, le professionnalisme la rigueur mais aussi la bonne humeur et l’énergie de Herve et de son équipe. Je garde un excellemment souvenir de cette collaboration.",
       image: 'https://media.licdn.com/dms/image/C5603AQH-ZWUMbVGx7w/profile-displayphoto-shrink_800_800/0/1609152945990?e=2147483647&v=beta&t=4rVZo4pt4h4QluygnoD8t5xl239PTc0AgZnJPXF0p9k',
     },
     {
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'https://media.licdn.com/dms/image/C4E03AQF7xoJblrGtVQ/profile-displayphoto-shrink_400_400/0/1573432030916?e=1683158400&v=beta&t=FsUN0EH4BqramUsxsfVsxGpTnXsXkL78e9NlNt-rM7Y',
     },
     {
-      name: 'Danie',
+      name: 'Marc Perraudin',
       role: 'Rôle 5',
       company: 'Entreprise 5',
       text: 'Témoignage 5',
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Sébastien Gachen',
       role: 'CEO',
       company: 'EGIA Capital',
-      text: 'Todo',
+      text: "Développeur Fullstack Web et Entrepreneur expérimenté, je recommande vivement ses services pour tous vos projets. Hervé est quelqu'un de fiable, de confiance et offre toujours des conseils pertinents ainsi que des résultats convaincants en un temps record. En outre, sa nature humaine et bienveillante en font un excellent partenaire de travail.",
       image: 'https://media.licdn.com/dms/image/C4D03AQERxKNJq0dcbg/profile-displayphoto-shrink_800_800/0/1630613830009?e=2147483647&v=beta&t=e2eUCaxif_QUzx-vlsh5QI3hUGULmhmYjy3fdobEX-s',
     },
   ];
@@ -350,4 +350,24 @@ document.addEventListener("DOMContentLoaded", function() {
   menuToggle.addEventListener("click", function() {
     navbar.classList.toggle("open");
   });
+});
+
+// Carousel homepage
+
+document.addEventListener("DOMContentLoaded", function() {
+  const carousel = document.querySelector(".carousel");
+  const items = carousel.querySelectorAll(".carousel-item");
+  let currentIndex = 0;
+  let nextIndex = 1;
+
+  setInterval(function() {
+    items[currentIndex].classList.remove("active");
+    items[nextIndex].classList.add("active");
+
+    items[currentIndex].querySelector('img').style.opacity = '0';
+    items[nextIndex].querySelector('img').style.opacity = '1';
+
+    currentIndex = nextIndex;
+    nextIndex = (nextIndex + 1) % items.length;
+  }, 3000);
 });

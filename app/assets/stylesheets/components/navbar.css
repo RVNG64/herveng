@@ -33,11 +33,16 @@ nav ul {
 
 nav ul li {
   margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 nav a {
   text-decoration: none;
   color: #ffffff;
+}
+
+#last-nav-link {
+  margin-right: 3rem;
 }
 
 @media (max-width: 768px) {

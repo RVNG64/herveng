@@ -2,12 +2,6 @@
   <div class="contact-container">
     <div class="form-container">
       <h2>Contactez-moi</h2>
-      <% if flash[:notice] %>
-        <div class="flash-message success"><%= flash[:notice] %></div>
-      <% end %>
-      <% if flash[:alert] %>
-        <div class="flash-message error"><%= flash[:alert] %></div>
-      <% end %>
       <form class="contact-form" action="/contact" method="POST">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <div class="form-group">
