@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
     typedTextElement.style.visibility = 'visible';
 
     const typed = new Typed('#typed-text', {
-      strings: ['*Actually, I\'m a website designed and developed by H.'],
+      strings: ['*En vrai, je suis un site web imaginé et codé par H.'],
       typeSpeed: 80,
       backSpeed: 0,
       loop: false,

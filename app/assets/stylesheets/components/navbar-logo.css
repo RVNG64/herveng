@@ -1,30 +1,40 @@
 .logo-container {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   width: auto;
-  overflow: hidden;
   font-size: 1.3rem;
   font-weight: bold;
+}
+
+.text-wrapper {
+  overflow: hidden;
+  display: flex;
+  width: auto;
 }
 
 .logo-link {
   text-decoration: none;
   color: #ffffff;
-  display: inline-block;
-  width: 15rem;
+  display: flex;
+  align-items: center;
+  width: 20rem;
 }
 
-.copyright-symbol,
-.text-container {
+.copyright-symbol {
   display: inline-block;
   vertical-align: middle;
   transition: transform 0.3s ease;
+  margin-right: 0.5rem;
+  z-index: 2;
 }
 
 .logo-text-container {
   position: relative;
   white-space: nowrap;
   overflow: hidden;
+  display: inline-block;
+  z-index: 1;
 }
 
 .logo-text,
@@ -33,12 +43,15 @@
   transition: transform 0.3s ease;
 }
 
+.logo-text {
+  width: 100%;
+}
+
 .hidden-text {
   position: absolute;
   top: 0;
   left: 100%;
   white-space: nowrap;
-  max-width: 0;
   overflow: hidden;
 }
 
@@ -47,7 +60,7 @@
 }
 
 .logo-link:hover .hidden-text {
-  transform: translateX(-93%);
+  transform: translateX(-100%);
   max-width: 320px;
 }
 
