@@ -10,6 +10,7 @@
 .text-wrapper {
   overflow: hidden;
   display: flex;
+  position: relative;
   width: auto;
 }
 
@@ -29,18 +30,11 @@
   z-index: 2;
 }
 
-.logo-text-container {
-  position: relative;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  z-index: 1;
-}
-
 .logo-text,
 .hidden-text {
   display: inline-block;
   transition: transform 0.3s ease;
+  white-space: nowrap;
 }
 
 .logo-text {
@@ -51,7 +45,6 @@
   position: absolute;
   top: 0;
   left: 100%;
-  white-space: nowrap;
   overflow: hidden;
 }
 
@@ -61,7 +54,6 @@
 
 .logo-link:hover .hidden-text {
   transform: translateX(-100%);
-  max-width: 320px;
 }
 
 .logo-link:hover .copyright-symbol {

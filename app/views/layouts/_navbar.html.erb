@@ -5,16 +5,13 @@
         <%= link_to root_path, class: "logo-link" do %>
           <span class="copyright-symbol">&copy;</span>
           <div class="text-wrapper">
-            <span class="logo-text-container">
-              <span class="logo-text">Codé par H.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            </span>
-            <div class="hidden-text-container">
-              <span class="hidden-text">Hervé Nguetsop</span>
-            </div>
+            <span class="logo-text">Codé par H.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="hidden-text">Hervé Nguetsop</span>
           </div>
         <% end %>
       </div>
     </div>
+
     <button class="menu-toggle" aria-label="Menu">
       <span class="burger-bar"></span>
       <span class="burger-bar"></span>
@@ -23,13 +20,13 @@
     <div class="nav-menu" id="navMenu">
       <ul>
         <li>
-          <%= link_to "Accueil", root_path %>
+          <%= link_to "Accueil", root_path, class: 'nav-link' %>
         </li>
         <li>
-          <%= link_to "Projets", projects_path %>
+          <%= link_to "Projets", projects_path, class: 'nav-link' %>
         </li>
         <li>
-          <%= link_to "À propos", about_path %>
+          <%= link_to "À propos", about_path, class: 'nav-link' %>
         </li>
 <!--        <li>
           <%= link_to "Blog", posts_path %>
