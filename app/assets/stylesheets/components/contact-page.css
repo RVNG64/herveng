@@ -40,6 +40,16 @@
   animation: fadeIn 1s 0.5s forwards;
 }
 
+.contact-details a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: #00a8ff;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

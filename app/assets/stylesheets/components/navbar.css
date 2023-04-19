@@ -41,6 +41,32 @@ nav a {
   color: #ffffff;
 }
 
+.nav-link {
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #00BFFF;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #00BFFF;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
 #last-nav-link {
   margin-right: 3rem;
 }

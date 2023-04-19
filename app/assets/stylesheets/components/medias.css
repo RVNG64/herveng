@@ -21,6 +21,10 @@
   color: black;
 }
 
+.media-appearances-section h4 {
+  text-align: center;
+}
+
 .media-logos-slider {
   display: flex;
   animation: scrolling-logos 95s linear infinite;
