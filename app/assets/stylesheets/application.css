@@ -13,21 +13,21 @@
  *= require_tree .
  *= require_self
  */
-@import url(/assets/components/navbar.css);
-@import url(/assets/components/cursor.css);
-@import url(/assets/components/navbar-logo.css);
-@import url(/assets/components/header.css);
-@import url(/assets/components/scrolling-contact.css);
-@import url(/assets/components/audioplayer.css);
-@import url(/assets/components/contact-page.css);
-@import url(/assets/components/testimonials.css);
-@import url(/assets/components/footer.css);
-@import url(/assets/components/audioplayer.css);
-@import url(/assets/components/home-card.css);
-@import url(/assets/components/about.css);
-@import url(/assets/components/projects.css);
-@import url(/assets/components/medias.css);
-@import url(/assets/components/blog-home.css);
+@import url(/assets/stylesheets/components/navbar.css);
+@import url(/assets/stylesheets/components/cursor.css);
+@import url(/assets/stylesheets/components/navbar-logo.css);
+@import url(/assets/stylesheets/components/header.css);
+@import url(/assets/stylesheets/components/scrolling-contact.css);
+@import url(/assets/stylesheets/components/audioplayer.css);
+@import url(/assets/stylesheets/components/contact-page.css);
+@import url(/assets/stylesheets/components/testimonials.css);
+@import url(/assets/stylesheets/components/footer.css);
+@import url(/assets/stylesheets/components/audioplayer.css);
+@import url(/assets/stylesheets/components/home-card.css);
+@import url(/assets/stylesheets/components/about.css);
+@import url(/assets/stylesheets/components/projects.css);
+@import url(/assets/stylesheets/components/medias.css);
+@import url(/assets/stylesheets/components/blog-home.css);
 
 body {
   font-family: 'Poppins', sans-serif;
