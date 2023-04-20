@@ -16,7 +16,7 @@
 }
 
 #about-section1 {
-  background: asset-url('dev.jpeg') no-repeat center 5% fixed;
+  background: url('/assets/images/dev.jpeg') no-repeat center 5% fixed;
   background-size: cover;
 }
 
@@ -31,7 +31,7 @@
 }
 
 #about-section4 {
-  background: url('/assets/forbes.png') no-repeat center 25% fixed;
+  background: url('/assets/images/forbes.png') no-repeat center 25% fixed;
   background-size: cover;
 }
 
