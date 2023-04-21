@@ -1,6 +1,6 @@
 // effet de slide up du header
 
-window.addEventListener('load', function() {
+window.addEventListener('turbo:load', function() {
   const fadeEffect = document.querySelectorAll('.fade-in-slide-up');
   fadeEffect.forEach(function(element) {
     element.classList.add('fade-in');
@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
 
 // effet sur la souris
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("turbo:load", function () {
   const cursor = document.createElement("div");
   cursor.classList.add("custom-cursor");
   document.body.appendChild(cursor);
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // changement de background body en scroll
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('turbo:load', function () {
   const cards = document.querySelector('.card-container');
   const body = document.querySelector('body');
 
@@ -59,24 +59,34 @@ document.addEventListener('DOMContentLoaded', function () {
   updateBackgroundColor();
 });
 
-// effet de scroll sur les cards
+document.addEventListener("turbo:load", () => {
+  const cardsContainer = document.getElementById("cards-container");
 
-const cardsContainer = document.getElementById("cards-container");
+  if (cardsContainer) {
+    const onScroll = () => {
+      const cardsBottom = cardsContainer.getBoundingClientRect().bottom;
+      const windowHeight = window.innerHeight;
 
-document.addEventListener("scroll", () => {
-  const cardsBottom = cardsContainer.getBoundingClientRect().bottom;
-  const windowHeight = window.innerHeight;
+      if (cardsBottom <= windowHeight) {
+        cardsContainer.classList.add("spread");
+      } else {
+        cardsContainer.classList.remove("spread");
+      }
+    };
 
-  if (cardsBottom <= windowHeight) {
-    cardsContainer.classList.add("spread");
-  } else {
-    cardsContainer.classList.remove("spread");
+    document.addEventListener("scroll", onScroll);
+
+    // Supprimez l'écouteur d'événements lors du déchargement de la page pour éviter les fuites de mémoire
+    document.addEventListener("turbo:before-cache", () => {
+      document.removeEventListener("scroll", onScroll);
+    });
   }
 });
 
+
 // Popup sur Testimonials
 //Liste des Testimonials
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
   const testimonialsData = [
     {
       name: 'Florian Auger',
@@ -229,14 +239,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Effet Typed.js en header
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
   setTimeout(() => {
     const typedTextElement = document.getElementById('typed-text');
     const customCursorElement = document.getElementById('custom-cursor');
     typedTextElement.style.visibility = 'visible';
 
     const typed = new Typed('#typed-text', {
-      strings: ['*En vrai, je suis un site imaginé et codé par Hervé'],
+      strings: ['*En vrai, je suis un site imaginé et codé par Hervé.'],
       typeSpeed: 80,
       backSpeed: 0,
       loop: false,
@@ -268,7 +278,7 @@ document.querySelectorAll(".form-group input, .form-group textarea").forEach((el
   });
 
   // Gérer les valeurs déjà remplies lors du chargement de la page
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("turbo:load", () => {
     updateLabelStyles(element);
   });
 });
@@ -276,7 +286,7 @@ document.querySelectorAll(".form-group input, .form-group textarea").forEach((el
 
 // Page about
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
   const controller = new ScrollMagic.Controller();
 
   document.querySelectorAll('.about-parallax-section').forEach(section => {
@@ -290,16 +300,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.addEventListener("scroll", function() {
-  const parallaxImage = document.querySelector(".parallax-image");
-  let scrollPosition = window.pageYOffset;
-
-  parallaxImage.style.transform = "translateY(" + scrollPosition * 0.5 + "px)";
-});
-
 // Page projects
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("turbo:load", () => {
   const projects = document.querySelectorAll(".project");
 
   window.addEventListener("scroll", () => {
@@ -315,8 +318,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Animation entrée et chargement
-document.addEventListener("DOMContentLoaded", () => {
+// Opening animation
+
+function initializeOpeningAnimation() {
   const greetings = ["Bonjour", "Hello", "Kaixo", "Hola", "Hallo", "Ciao", "こんにちは", "안녕하세요"];
   const openingAnimation = document.getElementById("opening-animation");
   const openingText = document.getElementById("opening-text");
@@ -332,17 +336,28 @@ document.addEventListener("DOMContentLoaded", () => {
       openingAnimation.style.animationPlayState = "running";
     }, 1000);
     setTimeout(() => {
-      openingAnimation.style.display = "none";
+      openingAnimation.classList.add("hidden");
     }, 1500);
   }
 
+  // Réinitialiser l'animation
+  openingAnimation.classList.remove("hidden");
+  openingAnimation.style.animationPlayState = "paused";
+
   setInterval(changeGreeting, 200);
   setTimeout(hideOpeningAnimation, 3000);
+}
+
+document.addEventListener("turbo:load", initializeOpeningAnimation);
+document.addEventListener("turbo:load", () => {
+  if (document.location.pathname === "/") {
+    initializeOpeningAnimation();
+  }
 });
 
 
 // Burger navbar responsive
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("turbo:load", function() {
   const menuToggle = document.querySelector(".menu-toggle");
   const navMenu = document.querySelector("#navMenu");
   const navbar = document.querySelector(".navbar");
@@ -354,7 +369,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Carousel homepage
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("turbo:load", function() {
   const carousel = document.querySelector(".carousel");
   const items = carousel.querySelectorAll(".carousel-item");
   let currentIndex = 0;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RNVG - Web Developer & Designer UX-UI</title>
+    <title>Hervé Nguetsop - Développeur Web Fullstack & Front-end</title>
     <meta name="description" content="Découvrez les services de RNVG, un développeur web et designer UX/UI, spécialisé dans la création de sites web et d'applications mobiles modernes et performants.">
     <meta name="keywords" content="développeur web, designer UX/UI, création sites web, applications mobiles, RNVG">
     <meta name="author" content="RNVG">
@@ -9,6 +9,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag 'components/intro-home', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag 'fav-rv.jpg' %>
@@ -21,8 +22,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <%= javascript_importmap_tags %>
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
@@ -41,8 +40,6 @@
     <%= render "layouts/audioplayer" %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script>AOS.init();</script>
 <!--    <% if user_signed_in? %>
       <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>
     <% else %>
