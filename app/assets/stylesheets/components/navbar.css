@@ -178,3 +178,7 @@ nav a {
 .hello-button:hover:before {
   opacity: 1;
 }
+
+.hidden {
+  display: none;
+}

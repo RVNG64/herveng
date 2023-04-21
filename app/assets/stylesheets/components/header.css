@@ -22,7 +22,7 @@
 
 .header-container h2 {
   font-family: 'Sora', sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 }
 
 .fade-in-slide-up {
@@ -274,5 +274,34 @@
 
   .portrait-container {
     display: none;
+  }
+}
+
+.scroll-down-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.scroll-down-arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  opacity: 0;
+  animation: fadeInAndDown 1.5s infinite;
+  animation-delay: 5.5s;
+}
+
+@keyframes fadeInAndDown {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(20px) rotate(45deg);
   }
 }

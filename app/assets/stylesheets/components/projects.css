@@ -44,12 +44,15 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 50%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0) 50%);
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: 30px;
   color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .project h2 {
@@ -58,7 +61,6 @@
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-left: -30px;
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -73,7 +75,6 @@
   color: #fff;
   font-size: 1.2rem;
   text-align: left;
-  margin-left: -30px;
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -82,4 +83,51 @@
 .project.visible p {
   opacity: 1;
   transform: translateX(0);
+}
+
+.project-description {
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  width: 40%;
+  min-width: 300px;
+}
+
+.project-title {
+  color: #fff;
+  font-size: 2rem;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.project-type {
+  display: inline-block;
+  color: #fff;
+  background-color: #3f51b5;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 3px;
+}
+
+.project p {
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: left;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.project-role {
+  display: block;
+  color: #ccc;
+  font-size: 1rem;
+  text-align: left;
+  font-style: italic;
+  margin-top: 1rem;
 }
