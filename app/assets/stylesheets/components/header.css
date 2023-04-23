@@ -18,11 +18,17 @@
   font-family: 'Sora', sans-serif;
   font-size: 5rem;
   margin: 0;
+  text-align: center;
 }
 
 .header-container h2 {
   font-family: 'Sora', sans-serif;
   font-size: 1.6rem;
+  text-align: center;
+}
+
+.header-container p {
+  text-align: center;
 }
 
 .fade-in-slide-up {
@@ -106,6 +112,18 @@
   object-position: center;
   width: 100%;
   height: 100%;
+  position: relative;
+}
+
+.portrait-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 #video-background {
@@ -232,7 +250,7 @@
   }
 }
 
-/* Tablet */
+/* Tablette */
 @media (max-width: 1024px) {
   .header-container h1 {
     font-size: 4rem;
@@ -264,7 +282,7 @@
   }
 
   #typed-text {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .header-button {

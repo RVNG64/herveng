@@ -17,7 +17,8 @@
       <span class="burger-bar"></span>
       <span class="burger-bar"></span>
     </button>
-    <div class="nav-menu" id="navMenu">
+
+    <div class="nav-menu large-screen-menu">
       <ul>
         <li>
           <%= link_to "Accueil", root_path, class: 'nav-link' %>
@@ -33,6 +34,26 @@
         </li>-->
         <li>
           <%= link_to "Say Hello 👋🏿", contact_path, class: 'hello-button' %>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-menu small-screen-menu" id="navMenu">
+      <ul>
+        <li>
+          <%= link_to "Accueil", root_path, class: 'nav-link small-screen-link' %>
+        </li>
+        <li>
+          <%= link_to "Projets", projects_path, class: 'nav-link small-screen-link' %>
+        </li>
+        <li>
+          <%= link_to "À propos", about_path, class: 'nav-link small-screen-link' %>
+        </li>
+<!--        <li>
+          <%= link_to "Blog", posts_path %>
+        </li>-->
+        <li>
+          <%= link_to "Contact", contact_path, class: 'nav-link small-screen-link' %>
         </li>
       </ul>
     </div>

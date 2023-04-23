@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   height: 100px;
+  overflow: hidden;
 }
 
 .media-appearances-section .section-title {
@@ -28,6 +29,8 @@
 .media-logos-slider {
   display: flex;
   animation: scrolling-logos 95s linear infinite;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .media-logos-slider img {
@@ -42,5 +45,11 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .media-logos-slider {
+    animation: scrolling-logos 50s linear infinite;
   }
 }

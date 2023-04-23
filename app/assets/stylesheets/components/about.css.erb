@@ -208,12 +208,46 @@
 
 /* Pour les mobiles */
 @media screen and (max-width: 480px) {
+
+  #about-section1 {
+    background: url("https://res.cloudinary.com/dvzsvgucq/image/upload/v1682276004/HervePortraitsStudio20211006BD-1_cv8rq4.jpg") no-repeat center 5% fixed;
+    background-size: cover;
+    position: relative;
+  }
+
+  #about-section1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  #about-section3 {
+    background: url('https://res.cloudinary.com/dvzsvgucq/image/upload/v1680280371/DSC09561_i1degt.jpg') no-repeat 40% center fixed;
+    background-size: cover;
+  }
+
+  #about-section5 {
+    background: url('https://res.cloudinary.com/dvzsvgucq/image/upload/v1679050856/DSC02904_arkwah.jpg') no-repeat 63% center fixed;
+    background-size: cover;
+  }
+
+  .text-container, .text-betsen {
+    text-align: justify;
+  }
+
+
   .about-content .about-parallax-section h2 {
     font-size: 24px;
   }
 
   .about-detail-section {
     height: auto;
+    margin: 0 1.3rem;
   }
 
   .image-container, .image-betsen {

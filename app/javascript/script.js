@@ -357,15 +357,18 @@ document.addEventListener("turbo:load", () => {
 
 
 // Burger navbar responsive
-document.addEventListener("turbo:load", function() {
+function setupBurgerMenu() {
   const menuToggle = document.querySelector(".menu-toggle");
-  const navMenu = document.querySelector("#navMenu");
-  const navbar = document.querySelector(".navbar");
+  const navMenu = document.getElementById("navMenu");
 
-  menuToggle.addEventListener("click", function() {
-    navbar.classList.toggle("open");
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("open");
   });
-});
+}
+
+document.addEventListener("turbo:load", setupBurgerMenu);
+document.addEventListener("DOMContentLoaded", setupBurgerMenu);
+
 
 // Carousel homepage
 

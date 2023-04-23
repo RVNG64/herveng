@@ -212,3 +212,83 @@
 .intro-button:hover:before {
   opacity: 1;
 }
+
+/*
+@media (max-width: 991px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+}
+*/
+
+@media (max-width: 767px) {
+  .introduction-section {
+    padding: 2rem 0;
+  }
+
+  .introduction-section h3 {
+    font-size: 1.8rem;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-text {
+    text-align: justify;
+  }
+
+  .experience h4, .skills h4 {
+    font-size: 1.3rem;
+  }
+
+  .experience li, .skills li {
+    font-size: 1rem;
+  }
+
+  .intro-button {
+    padding: 15px 25px;
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+
+  #intro-video {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .introduction-section {
+    padding: 1rem 1.2rem;
+  }
+
+  .introduction-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+
+  .carousel-container {
+    height: 12rem;
+  }
+
+  .experience h4, .skills h4 {
+    font-size: 1.1rem;
+  }
+
+  .experience li, .skills li {
+    font-size: 0.9rem;
+  }
+
+  .intro-button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+  }
+
+  #intro-video {
+    width: 100%;
+  }
+}
