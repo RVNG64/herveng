@@ -131,3 +131,63 @@
   font-style: italic;
   margin-top: 1rem;
 }
+
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-container {
+    margin: 0;
+    padding: 5rem 1.3rem 0 1.3rem;
+  }
+
+  .project-description {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-description {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .project-overlay {
+    padding-left: 0;
+    height: 100%;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+  }
+
+  .project h2 {
+    font-size: 1rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project p {
+    font-size: 0.5rem;
+  }
+
+  .project-type {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  .project-role {
+    font-size: 0.5rem;
+  }
+}
