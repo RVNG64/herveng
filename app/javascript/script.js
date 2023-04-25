@@ -92,21 +92,21 @@ document.addEventListener('turbo:load', () => {
       name: 'Florian Auger',
       role: 'CEO',
       company: 'Outercraft',
-      text: "Hervé fait preuve d'un réel discernement et d'une objectivité sur son marcher pour construire des stratégies solides. Il fait preuve d'une énergie entrepreneuriale et d'une grande efficacité de travail",
+      text: "Hervé fait preuve d'un réel discernement et d'une objectivité sur son marché pour construire des stratégies solides. Il fait preuve d'une énergie entrepreneuriale et d'une grande efficacité de travail",
       image: 'https://www.designfdna.org/sites/default/files/styles/carre/public/contenu/membres/florian-auger/photo/photo-de-florian-auger.jpg?itok=4bpdA7tl',
     },
     {
       name: 'Serge Betsen',
       role: 'Ancien capitaine du XV de France',
       company: 'Serge Betsen Consulting',
-      text: "Durant toute notre période de collaboration, il a fait preuve d’un réel professionnalisme et d’une rigueur à toute épreuve. Sa capacité de travail, sa créativité et son esprit d’écoute/analyse ont été essentiels pour la réussite des nombreux projets que je lui ai confiés, souvent à traiter simultanément et sans lien entre eux.",
+      text: "Durant toute notre période de collaboration, Hervé a fait preuve d’un réel professionnalisme et d’une rigueur à toute épreuve. Sa capacité de travail.",
       image: 'https://lepetitjournal.com/sites/default/files/styles/main_article/public/2022-05/Serge%20-%20photo%20quiz%281%29.jpeg?itok=aZdPXnsK',
     },
     {
       name: 'François Lempereur',
       role: 'Consultant Média-Affaires Publiques',
       company: 'Ex TF1',
-      text: "J'ai eu l 'occasion de collaborer avec Hervé lors d'un forum des Sports de l'AS SPORTIVE de TF1. Le 1er contact a été tout de suite convivial et pro. J'ai apprécie la ponctualité, le professionnalisme la rigueur mais aussi la bonne humeur et l’énergie de Herve et de son équipe. Je garde un excellemment souvenir de cette collaboration.",
+      text: "J'ai eu l 'occasion de collaborer avec Hervé lors d'un forum de TF1. Le 1er contact a été tout de suite convivial et pro. J'ai apprécie la réactivité, le professionnalisme et la rigueur mais aussi la bonne humeur et l’énergie d'Hervé et de son équipe. Je garde un excellent souvenir de cette collaboration.",
       image: 'https://media.licdn.com/dms/image/C5603AQH-ZWUMbVGx7w/profile-displayphoto-shrink_800_800/0/1609152945990?e=2147483647&v=beta&t=4rVZo4pt4h4QluygnoD8t5xl239PTc0AgZnJPXF0p9k',
     },
     {
@@ -134,7 +134,7 @@ document.addEventListener('turbo:load', () => {
       name: 'Jean-Baptiste Ancelot',
       role: 'CEO',
       company: 'Wine Explorers',
-      text: 'Todo',
+      text: 'Hervé est un entrepreneur passionné et très impliqué dans son travail. Il a une grande capacité d’écoute et de compréhension des besoins de ses clients. Il est très réactif et sait s’adapter à toutes les situations. Il est très professionnel et sait s’entourer de personnes compétentes. Je recommande vivement Hervé pour tous vos projets.',
       image: 'https://i.ytimg.com/vi/BFPcTHfbt2E/maxresdefault.jpg',
     },
     {
