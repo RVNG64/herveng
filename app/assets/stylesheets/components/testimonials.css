@@ -14,9 +14,11 @@
   margin-bottom: 3rem;
 }
 
+/*
 .row-1 {
-  width: 80%;
+  width: 80%; Revenir à 80% après ajout de la 2e row
 }
+*/
 
 .section-title {
   text-align: center;
