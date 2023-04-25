@@ -23,12 +23,62 @@
 }
 
 .intro-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  animation: zoomIn 1s ease;
+}
+
+.experience-skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin: 2rem 0;
+}
+
+.intro-column {
+  flex: 1;
+  text-align: left;
+  padding: 1rem;
+  margin: 0 2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.intro-column::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0.8;
+}
+
+.intro-column:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .intro-sec {
@@ -71,6 +121,9 @@
 .experience h4, .skills h4 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .experience ul, .skills ul {
@@ -81,7 +134,9 @@
 .experience li, .skills li {
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  opacity: 0.8;
+  opacity: 0.9;
+  color: #fff;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-container {
@@ -90,7 +145,7 @@
   align-items: center;
   width: 100%;
   max-width: 100%;
-  height: 100%;
+  height: 50vh;
   border-radius: 15px;
 }
 
@@ -141,24 +196,7 @@
 .skills li i {
   margin-right: 8px;
   font-size: 1.2rem;
-}
-
-/* Animation du gradient de fond */
-@keyframes gradientBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.introduction-section {
-  background-size: 200% 200%;
-  animation: gradientBackground 15s ease infinite;
+  color: #f9c448;
 }
 
 .intro-button {
@@ -254,6 +292,11 @@
 
   #intro-video {
     width: 100%;
+  }
+
+  .intro-column {
+    margin: 1rem 0;
+    flex-basis: 100%;
   }
 }
 
