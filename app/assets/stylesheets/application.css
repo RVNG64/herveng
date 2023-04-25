@@ -28,6 +28,10 @@
 @import url(/assets/stylesheets/components/projects.css);
 @import url(/assets/stylesheets/components/medias.css);
 @import url(/assets/stylesheets/components/blog-home.css);
+@import url(/assets/stylesheets/components/posts_new.css);
+@import url(/assets/stylesheets/components/posts_show.css);
+@import url(/assets/stylesheets/components/posts_index.css);
+@import url(/assets/stylesheets/components/posts_edit.css);
 
 body {
   font-family: 'Poppins', sans-serif;
