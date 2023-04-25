@@ -1,7 +1,12 @@
-<h1><%= @post.title %></h1>
-
-<p><%= @post.content %></p>
-
-<%= link_to "Modifier", edit_post_path(@post) %>
-<%= link_to "Supprimer", post_path(@post), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cet article ?" } %>
-<%= link_to "Retour à la liste", posts_path %>
+<div class="show-post-container">
+  <h1 class="show-post-title"><%= @post.title %></h1>
+  <div class="show-post-content">
+    <p><%= @post.content %></p>
+  </div>
+  <div class="show-post-buttons">
+    <%= link_to "Revenir à l'index des posts", posts_path, class: "show-post-button" %>
+    <% if user_signed_in? %>
+      <%= link_to "Modifier l'article", edit_post_path(@post), class: "show-post-button" %>
+    <% end %>
+  </div>
+</div>

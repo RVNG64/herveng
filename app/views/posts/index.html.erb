@@ -1,23 +1,12 @@
-<h1>Blog</h1>
+<div class="index-container">
+  <h1 class="index-title">Blog</h1>
 
-<%= link_to "Créer un nouvel article", new_post_path %>
-
-<table>
-  <thead>
-    <tr>
-      <th>Titre</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
+  <div class="posts">
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to post.title, post_path(post) %></td>
-        <td>
-          <%= link_to "Modifier", edit_post_path(post) %>
-          <%= link_to "Supprimer", post_path(post), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cet article ?" } %>
-        </td>
-      </tr>
+      <div class="post">
+        <h2 class="post-title"><%= link_to post.title, post_path(post) %></h2>
+        <p class="post-content"><%= post.content.to_plain_text.truncate(100) %></p>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>

@@ -1,15 +1,19 @@
-<h1>Nouvel article</h1>
+<div class="new-post-container">
+  <h1 class="new-post-title">Nouvel article</h1>
 
-<%= form_with model: @post, local: true do |form| %>
-  <div>
-    <%= form.label :title, "Titre" %>
-    <%= form.text_field :title %>
-  </div>
+  <%= form_with(model: @post, html: { class: 'new-post-form' }) do |form| %>
+    <div class="new-post-field">
+      <%= form.label :title, "Titre", class: "new-post-label" %>
+      <%= form.text_field :title, class: 'new-post-input' %>
+    </div>
 
-  <div>
-    <%= form.label :content, "Contenu" %>
-    <%= form.text_area :content %>
-  </div>
+    <div class="new-post-field">
+      <%= form.label :content, "Contenu", class: "new-post-label" %>
+      <%= form.rich_text_area :content, class: 'new-post-textarea' %>
+    </div>
 
-  <%= form.submit "Créer l'article" %>
-<% end %>
+    <div class="new-post-actions">
+      <%= form.submit "Créer l'article", class: 'new-post-btn' %>
+    </div>
+  <% end %>
+</div>
