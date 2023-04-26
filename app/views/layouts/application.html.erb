@@ -5,9 +5,10 @@
     <meta name="keywords" content="développeur web, fullstack, front-end, designer UX/UI, sites web, applications mobiles, Hervé Nguetsop, site internet, wordpress, shopify">
     <meta name="author" content="Hervé Nguetsop">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= favicon_link_tag 'fav-rv.jpg' %>
     <meta property="og:title" content="Hervé Nguetsop - Développeur Web Fullstack & Front-end" />
     <meta property="og:description" content="Découvrez le site web d'Hervé Nguetsop, développeur web fullstack passionné par le design et le front-end. Spécialisé dans la création de sites web et d'applications modernes et performants." />
-    <meta property="og:image" content="https://www.herveng.com/app/assets/images/fav-rv.jpg" />
+    <meta property="og:image" content="<%= asset_url('fav-rv.jpg') %>" />
     <meta property="og:url" content="https://www.herveng.com" />
     <meta property="og:type" content="website" />
     <%= csrf_meta_tags %>
@@ -28,7 +29,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag 'components/intro-home', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= favicon_link_tag 'fav-rv.jpg' %>
     <link rel="stylesheet" href="/assets/components/medias.css">
     <link rel="stylesheet" href="/assets/components/navbar.css">
     <link rel="stylesheet" href="/assets/components/home-cards.css">
