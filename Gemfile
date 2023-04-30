@@ -53,7 +53,7 @@ gem 'htmlcompressor'
 gem 'brotli'
 gem 'rack-brotli'
 gem 'turbolinks'
-gem 'terser'
+# gem 'terser'
 
 
 # Use Sass to process CSS
