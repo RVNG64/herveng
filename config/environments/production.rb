@@ -26,13 +26,13 @@ Rails.application.configure do
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
-  #config.middleware.use Rack::Deflater
+  config.middleware.use Rack::Deflater
 
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
   config.middleware.use Rack::Brotli
-  config.assets.js_compressor = :terser
+  # config.assets.js_compressor = :terser
 
   config.middleware.use HtmlCompressor::Rack,
     compress_css: true,
