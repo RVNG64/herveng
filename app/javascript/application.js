@@ -3,6 +3,9 @@ import "@hotwired/turbo-rails";
 import "./script";
 import "controllers";
 
+import Turbolinks from "turbolinks";
+Turbolinks.start();
+
 import Rails from "@rails/ujs";
 Rails.start();
 

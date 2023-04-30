@@ -26,9 +26,33 @@ Rails.application.configure do
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
+  config.middleware.use Rack::Deflater
+
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
+  config.assets.js_compressor = :uglifier
+  config.middleware.use Rack::Brotli
+
+
+  config.middleware.use HtmlCompressor::Rack,
+    compress_css: true,
+    compress_javascript: true,
+    preserve_line_breaks: false,
+    remove_comments: true,
+    remove_form_attributes: false,
+    remove_http_protocol: false,
+    remove_https_protocol: false,
+    remove_input_attributes: true,
+    remove_javascript_protocol: true,
+    remove_link_attributes: true,
+    remove_multi_spaces: true,
+    remove_quotes: true,
+    remove_script_attributes: true,
+    remove_style_attributes: true,
+    simple_boolean_attributes: true,
+    simple_doctype: false
+
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
