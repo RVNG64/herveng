@@ -49,11 +49,12 @@ gem 'pg', :group => :production
 gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'actiontext', '~> 7.0.0'
-gem 'uglifier'
 gem 'htmlcompressor'
 gem 'brotli'
 gem 'rack-brotli'
 gem 'turbolinks'
+gem 'terser-ruby'
+
 
 # Use Sass to process CSS
 # gem "sassc-rails"
