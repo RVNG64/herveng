@@ -7,7 +7,7 @@ window.addEventListener('turbo:load', function() {
   });
 });
 
-// effet sur la souris
+// effet souris personnalisée et scale en hover
 
 document.addEventListener("turbo:load", function () {
   const cursor = document.createElement("div");
