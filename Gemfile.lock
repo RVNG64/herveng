@@ -220,6 +220,8 @@ GEM
     sqlite3 (1.6.1-x86_64-linux)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    terser (1.1.14)
+      execjs (>= 0.3.0, < 3)
     thor (1.2.1)
     timeout (0.3.2)
     turbo-rails (1.4.0)
@@ -231,8 +233,6 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    uglifier (4.2.0)
-      execjs (>= 0.3.0, < 3)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -283,10 +283,10 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
+  terser
   turbo-rails
   turbolinks
   tzinfo-data
-  uglifier
   web-console
   webdrivers
   webpacker (~> 6.0.0.rc.6)
