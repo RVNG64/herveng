@@ -13,7 +13,6 @@
 
 .show-post-header {
   padding: 4rem 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('path/to/background/image.jpg');
   background-size: cover;
   background-position: center;
   transform: translateY(-50%);
@@ -23,7 +22,7 @@
 .show-post-title {
   font-size: 2.5rem;
   margin: 0;
-  color: #000000;
+  color: #ffffff;
   font-weight: bold;
   animation: fadeInDown 1s;
 }

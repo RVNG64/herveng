@@ -1,12 +1,15 @@
 <div class="show-post-container">
-  <h1 class="show-post-title"><%= @post.title %></h1>
+  <div class="show-post-header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= url_for(@post.cover_image.present? ? @post.cover_image : 'default_cover_image.jpg') %>');">
+    <h1 class="show-post-title"><%= @post.title %></h1>
+  </div>
   <div class="show-post-content">
     <p><%= @post.content %></p>
   </div>
   <div class="show-post-buttons">
-    <%= link_to "Revenir à l'index des posts", posts_path, class: "show-post-button" %>
+    <%= link_to "Revenir à l'index des posts", blog_path, class: "show-post-button" %>
     <% if user_signed_in? %>
       <%= link_to "Modifier l'article", edit_post_path(@post), class: "show-post-button" %>
+      <%= link_to "Supprimer l'article", post_path(@post), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cet article ?" }, class: "show-post-button" %>
     <% end %>
   </div>
 </div>

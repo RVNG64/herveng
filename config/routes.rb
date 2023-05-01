@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :posts
+  resources :posts, except: [:index]
   get 'pages/home'
   get 'pages/contact'
   root 'pages#home'
@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   post 'contact', to: 'messages#create'
   get 'about', to: 'pages#about'
   get 'projects', to: 'pages#projects'
+  get 'blog', to: 'posts#index'
   resources :messages, only: [:create]
 end

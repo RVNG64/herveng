@@ -12,9 +12,14 @@
       <%= form.rich_text_area :content %>
     </div>
 
+    <div class="field">
+      <%= form.label :cover_image, "Image de couverture" %>
+      <%= form.file_field :cover_image %>
+    </div>
+
     <div class="edit-post-buttons">
       <%= form.submit "Enregistrer les modifications", class: "edit-post-button" %>
-      <%= link_to "Annuler", post_path(@post), class: "edit-post-button" %>
+      <%= link_to "Annuler", post_path(@post), class: "edit-post-button cancel" %>
     </div>
   <% end %>
 </div>

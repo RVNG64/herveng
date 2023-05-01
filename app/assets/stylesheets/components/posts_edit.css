@@ -26,7 +26,8 @@
 }
 
 .field input,
-.field textarea {
+.field textarea,
+.field input[type="file"] {
   width: 100%;
   padding: 0.5rem;
   font-size: 1.1rem;
@@ -55,4 +56,12 @@
 
 .edit-post-button:hover {
   background-image: linear-gradient(45deg, #2977c9, #512da8);
+}
+
+.edit-post-button.cancel {
+  background-image: linear-gradient(45deg, #ff7675, #fd79a8);
+}
+
+.edit-post-button.cancel:hover {
+  background-image: linear-gradient(45deg, #c44441, #c94481);
 }
