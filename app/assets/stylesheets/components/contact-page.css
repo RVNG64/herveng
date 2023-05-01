@@ -207,7 +207,7 @@ textarea:focus + .label-form {
   }
 
   .contact-details {
-    align-items: flex-start;
+    align-items: center;
   }
 
   h2 {

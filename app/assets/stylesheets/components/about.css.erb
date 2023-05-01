@@ -192,17 +192,30 @@
 @media screen and (max-width: 768px) {
   .about-detail-section {
     flex-direction: column;
+    height: auto;
   }
 
   .text-container, .text-betsen {
     width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0 1rem;
+    text-align: justify;
+  }
+
+  .text-container p, .text-betsen p {
+    padding: 0 1rem;
+  }
+
+  .text-betsen h2 {
+    text-align: center;
   }
 
   .image-container, .image-betsen {
     width: 100%;
     height: 50vh;
+  }
+
+  .image-betsen {
+    height: 100%;
   }
 }
 
