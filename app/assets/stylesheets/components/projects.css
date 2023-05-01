@@ -1,6 +1,6 @@
 .projects-container {
   padding: 2rem;
-  background-color: #000;
+  background-color: #1a1a1a;
   margin-top: 9rem;
   margin-bottom: 3rem;
 }
@@ -134,20 +134,50 @@
 
 @media (max-width: 992px) {
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .projects-container {
-    margin: 0;
-    padding: 5rem 1.3rem 0 1.3rem;
+    grid-template-columns: 1fr;
   }
 
   .project-description {
-    width: 80%;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .project-overlay {
+    padding-left: 0;
+    height: 100%;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+  }
+
+  .project h2 {
+    font-size: 1rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project p {
+    font-size: 0.5rem;
+  }
+
+  .project-type {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  .project-role {
+    font-size: 0.5rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }

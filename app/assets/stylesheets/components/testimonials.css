@@ -1,6 +1,6 @@
 .testimonials-section {
   padding: 3rem 0;
-  background-color: #000000;
+  background-color: #1a1a1a;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -214,7 +214,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .row-1, .row-2 {
     flex-direction: column;
     display: flex;

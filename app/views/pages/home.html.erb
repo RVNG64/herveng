@@ -18,7 +18,7 @@
       </p>
       <%= link_to "En savoir plus", about_path, class: "header-button" %>
       <div class="scroll-down-indicator">
-        <span class="scroll-down-arrow"></span>
+        <a href="javascript:void(0)" class="scroll-down-arrow" onclick="scrollToAnimatedBars()"></a>
       </div>
     </div>
     <div class="portrait-container">
@@ -26,7 +26,7 @@
     </div>
 </header>
 
-  <div class="animated-bars">
+  <div class="animated-bars" id="animated-bars">
     <span class="bar bar-1"></span>
     <span class="bar bar-2"></span>
     <span class="bar bar-3"></span>

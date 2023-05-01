@@ -282,6 +282,11 @@
   .portrait-container {
     display: none;
   }
+
+  .animated-bars {
+    margin-top: 2rem;
+    height: auto;
+  }
 }
 
 .scroll-down-indicator {
