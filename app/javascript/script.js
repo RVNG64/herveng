@@ -134,7 +134,7 @@ document.addEventListener('turbo:load', () => {
       name: 'Jean-Baptiste Ancelot',
       role: 'CEO',
       company: 'Wine Explorers',
-      text: 'Hervé est un entrepreneur passionné et très impliqué dans son travail. Il a une grande capacité d’écoute et de compréhension des besoins de ses clients. Il est très réactif et sait s’adapter à toutes les situations. Il est très professionnel et sait s’entourer de personnes compétentes. Je recommande vivement Hervé pour tous vos projets.',
+      text: 'Hervé est un entrepreneur passionné et très inspirant. Il a une grande capacité d’écoute et a très vite compris mes besoins. Il est très réactif et force de proposition. Je recommande vivement Hervé pour tous vos projets !',
       image: 'https://i.ytimg.com/vi/BFPcTHfbt2E/maxresdefault.jpg',
     },
     {
