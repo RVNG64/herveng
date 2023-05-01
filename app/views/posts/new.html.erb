@@ -3,6 +3,11 @@
 
   <%= form_with(model: @post, html: { class: 'new-post-form' }) do |form| %>
     <div class="new-post-field">
+      <%= form.label :cover_image, "Image de couverture", class: "new-post-label" %>
+      <%= form.file_field :cover_image, class: 'new-post-input' %>
+    </div>
+
+    <div class="new-post-field">
       <%= form.label :title, "Titre", class: "new-post-label" %>
       <%= form.text_field :title, class: 'new-post-input' %>
     </div>

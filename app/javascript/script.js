@@ -389,10 +389,3 @@ document.addEventListener("turbo:load", function() {
     nextIndex = (nextIndex + 1) % items.length;
   }, 3000);
 });
-
-// Flèche ancre vers animated bars
-
-function scrollToAnimatedBars() {
-  const animatedBars = document.getElementById('animated-bars');
-  animatedBars.scrollIntoView({ behavior: 'smooth' });
-}
