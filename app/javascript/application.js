@@ -1,6 +1,7 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails";
 import "./script";
+import "./quill_init";
 import "controllers";
 
 import Turbolinks from "turbolinks";

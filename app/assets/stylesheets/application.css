@@ -91,3 +91,7 @@ body {
     transform: translateY(-100%);
   }
 }
+
+.ql-editor, .ql-container {
+  font-family: "Poppins", sans-serif !important;
+}

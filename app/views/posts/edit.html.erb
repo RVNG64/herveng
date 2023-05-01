@@ -9,7 +9,8 @@
 
     <div class="field">
       <%= form.label :content, "Contenu" %>
-      <%= form.rich_text_area :content %>
+      <div class="editor"></div>
+      <%= form.hidden_field :content, id: "post_content", value: @post.content %>
     </div>
 
     <div class="field">
