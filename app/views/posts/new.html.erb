@@ -14,7 +14,8 @@
 
     <div class="new-post-field">
       <%= form.label :content, "Contenu", class: "new-post-label" %>
-      <%= form.rich_text_area :content, class: 'new-post-textarea' %>
+      <div class="editor"></div>
+      <%= form.hidden_field :content, id: "post_content" %>
     </div>
 
     <div class="new-post-actions">
