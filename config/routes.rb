@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, path: '', path_names: {
+    sign_in: 'rvngmake_sign_in',
+    sign_up: 'rvngmake_sign_up',
+    sign_out: 'secret_sign_out',
+    password: 'secret_password',
+    confirmation: 'secret_confirmation',
+    unlock: 'secret_unlock',
+    registration: 'secret_registration'
+  }
   resources :posts, except: [:index], path: 'blog', param: :slug
   get 'pages/home'
   get 'pages/contact'
