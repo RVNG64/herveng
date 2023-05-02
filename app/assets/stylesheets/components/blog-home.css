@@ -1,15 +1,130 @@
-.post-list {
+.latest-posts {
+  margin: 1rem 1rem 3rem 1rem;
+  text-align: center;
+}
+
+.latest-posts .section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post-container {
+  perspective: 1000px;
+}
+
+.post-preview {
+  background-color: rgba(248, 248, 248, 0.8);
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-}
-
-.post {
-  border: 1px solid #ccc;
+  height: 100%;
   padding: 1rem;
-  border-radius: 5px;
+  transition: transform 0.5s, box-shadow 0.5s;
+  transform-origin: top;
+  transform-style: preserve-3d;
 }
 
-.post h2 {
-  margin-top: 0;
+.post-container:hover .post-preview {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform:scale(1.02);
+}
+
+.post-img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.post-content .post-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.post-text {
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.read-more {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.all-posts-button-container {
+  margin: 4rem 0 2rem 0;
+}
+
+.all-posts-button {
+  background-color: #3a8dff;
+  border: 1px solid #3a8dff;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.all-posts-button:hover {
+  background-color: #1d64c3;
+  border-color: #1d64c3;
+  color: #fff;
+}
+
+.all-posts-button:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .latest-posts .section-title {
+    font-size: 1.5rem;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-content .post-title {
+    font-size: 1.1rem;
+  }
+
+  .post-text {
+    font-size: 0.9rem;
+  }
 }
