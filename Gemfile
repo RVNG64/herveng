@@ -53,7 +53,7 @@ gem 'brotli'
 gem 'rack-brotli'
 gem 'turbolinks'
 gem 'terser'
-
+gem 'friendly_id'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

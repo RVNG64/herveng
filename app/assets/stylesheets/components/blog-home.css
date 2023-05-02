@@ -6,14 +6,15 @@
 .latest-posts .section-title {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin: 3rem 0;
   color: #000;
   text-transform: uppercase;
+  position: relative;
 }
 
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   opacity: 0;
   transform: translateY(50px);
@@ -32,44 +33,44 @@
   }
 }
 
-.post-container {
-  perspective: 1000px;
-}
-
 .post-preview {
-  background-color: rgba(248, 248, 248, 0.8);
-  border: 1px solid #ccc;
+  background-color: rgba(230, 230, 230, 0.8);
+  border: 1px solid #c2c2c2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 1rem;
-  transition: transform 0.5s, box-shadow 0.5s;
-  transform-origin: top;
-  transform-style: preserve-3d;
+  transition: all 0.3s ease-in-out;
 }
 
 .post-container:hover .post-preview {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform:scale(1.02);
+  transform: translateY(-10px);
 }
 
 .post-img {
   object-fit: cover;
   height: 200px;
   width: 100%;
-  margin-bottom: 1rem;
 }
 
 .post-content .post-title {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin: 0.6rem;
+  text-transform: uppercase;
+  font-family: "Sora", sans-serif;
   color: #000;
+}
+
+.post-content {
+  font-size: 1.25rem;
 }
 
 .post-text {
   margin-bottom: 1rem;
   color: #000;
+  font-size: 1.25rem;
 }
 
 .read-more {
@@ -84,7 +85,7 @@
 }
 
 .all-posts-button-container {
-  margin: 4rem 0 2rem 0;
+  margin: 5rem 0 2rem 0;
 }
 
 .all-posts-button {
