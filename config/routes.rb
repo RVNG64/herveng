@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :posts, except: [:index]
+  resources :posts, except: [:index], path: 'blog', param: :slug
   get 'pages/home'
   get 'pages/contact'
   root 'pages#home'
@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'projects', to: 'pages#projects'
   get 'blog', to: 'posts#index'
-  resources :messages, only: [:create]
+  resources :messages, only: [:create], param: :slug
 end

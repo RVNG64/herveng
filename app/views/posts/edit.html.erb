@@ -20,7 +20,7 @@
 
     <div class="edit-post-buttons">
       <%= form.submit "Enregistrer les modifications", class: "edit-post-button" %>
-      <%= link_to "Annuler", post_path(@post), class: "edit-post-button cancel" %>
+      <%= link_to "Annuler", post_path(@post.slug), class: "edit-post-button cancel" %>
     </div>
   <% end %>
 </div>
