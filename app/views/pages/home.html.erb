@@ -302,15 +302,27 @@
   </div>
 </div>
 
-<!--
-<div class="blog-preview-section">
-  <h2>Blog</h2>
-  <div class="blog-posts">
-    <% if @posts.present? %>
-      <%#= render @posts, partial: 'posts/post_preview' %>
-    <% else %>
-      <p>Aucun article de blog pour le moment.</p>
-    <% end %>
-  </div>
-</div>
--->
+<% if @latest_posts.any? %>
+  <section class="latest-posts">
+    <h2 class="section-title">L'Odyssée : derniers articles de mon blog</h2>
+    <div class="posts-grid">
+      <% @latest_posts.each do |post| %>
+        <div class="post-container">
+          <div class="post-preview">
+            <div class="post-img-container">
+              <%= image_tag post.cover_image, class: 'post-img', alt: "#{post.title} image de couverture" %>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title"><%= link_to post.title, post_path(post) %></h3>
+              <p class="post-text"><%= post.content.to_plain_text.truncate(100) %></p>
+              <%= link_to 'Lire la suite', post_path(post), class: 'read-more' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="all-posts-button-container">
+      <%= link_to 'Voir tous les articles', blog_path, class: 'all-posts-button' %>
+    </div>
+  </section>
+<% end %>

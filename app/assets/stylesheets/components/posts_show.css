@@ -5,18 +5,17 @@
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  perspective: 1px;
-  transform-style: preserve-3d;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .show-post-header {
   padding: 4rem 0;
   background-size: cover;
   background-position: center;
-  transform: translateY(-50%);
   text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .show-post-title {
@@ -44,7 +43,13 @@
   line-height: 1.5;
   position: relative;
   z-index: 1;
-  transform: translateY(-50%);
+}
+
+.show-post-content img {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .show-post-content p {
